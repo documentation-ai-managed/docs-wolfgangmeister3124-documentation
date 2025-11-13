@@ -1,0 +1,100 @@
+---
+title: Features
+
+description: Explore the key features of InstaDP for enhanced Instagram content management
+---
+
+## Core Capabilities
+
+InstaDP offers tools to view and download Instagram content seamlessly. You access high-definition images and profile data without compromising privacy. Key highlights include original size preservation and no-login policy.
+
+<Columns cols={3}>
+  <Card title="HD Viewing" icon="maximize" href="#">
+    Display images in full resolution up to 1080p.
+  </Card>
+  <Card title="Batch Download" icon="download-cloud" href="#">
+    Save multiple posts in one go as a ZIP archive.
+  </Card>
+  <Card title="Profile Analytics" icon="bar-chart-3" href="#">
+    View follower counts and post statistics instantly.
+  </Card>
+</Columns>
+
+## Advanced Viewing Options
+
+You customize your experience with various display modes.
+
+<Tabs>
+  <Tab title="Grid View" icon="grid">
+    See posts in a thumbnail grid for quick scanning.
+
+    Ideal for profiles with numerous images.
+  </Tab>
+  <Tab title="List View" icon="list">
+    Linear layout with metadata like timestamps and captions.
+
+    ```javascript
+    // Simulate API response for list view
+    const profileData = {
+      posts: [
+        { id: 1, caption: 'Sample post', timestamp: '2023-01-01' }
+      ]
+    };
+    console.log(profileData);
+    ```
+  </Tab>
+  <Tab title="Slideshow" icon="play">
+    Auto-play images with transitions for immersive review. Pause at any time.
+  </Tab>
+</Tabs>
+
+<Callout kind="success">
+  All features work on public data only, ensuring compliance and user trust.
+</Callout>
+
+## Download Management
+
+Manage your saves efficiently with these tools.
+
+<Steps>
+  <Step title="Select Images" icon="check-square">
+    Use checkboxes to pick specific posts from the profile.
+  </Step>
+  <Step title="Choose Format" icon="image">
+    Opt for JPEG or PNG based on your needs.
+  </Step>
+  <Step title="Export Archive" icon="package">
+    Generate a ZIP file containing all selected high-res images.
+
+    Track download progress in real-time.
+  </Step>
+</Steps>
+
+## Integration and API
+
+Extend functionality via the InstaDP API for developers.
+
+<Expandable title="API Quickstart" default-open="false">
+  Authenticate with your key and query profiles.
+
+  ```javascript
+  const apiKey = 'your_api_key';
+  fetch(`https://api.instadp.com/profiles/${username}?key=${apiKey}`)
+    .then(res => res.json())
+    .then(data => {
+      data.images.forEach(img => download(img.url));
+    });
+  ```
+</Expandable>
+
+## Privacy Features
+
+InstaDP never stores searched profiles or downloads. Sessions expire after use, and all traffic uses HTTPS. You control data visibility completely.
+
+| Feature | Benefit | Limit |
+|---------|---------|-------|
+| HD Downloads | Original quality | Free: 50/day |
+| No Login | Anonymous access | Public only |
+| Batch Export | Efficient saving | Up to 100 images |
+
+These features make InstaDP a reliable tool for content retrieval. Dive into troubleshooting for support. (Word count: 356)

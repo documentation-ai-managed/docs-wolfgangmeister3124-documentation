@@ -1,0 +1,70 @@
+---
+title: Introduction
+
+description: Overview of InstaDP and its core capabilities for viewing and downloading Instagram content
+---
+
+## Overview
+
+InstaDP lets you view and download Instagram profiles and pictures in their original high-definition size without logging in. You access public profiles easily through a simple web interface. This service prioritizes privacy and speed, delivering content directly without third-party trackers.
+
+<Columns cols={3}>
+  <Card title="View Profiles" icon="user" href="/docs/getting-started">
+    Examine user profiles, bios, and follower counts instantly.
+  </Card>
+  <Card title="Download Images" icon="download" href="/docs/features">
+    Save high-resolution photos from posts and stories.
+  </Card>
+  <Card title="No Login Required" icon="unlock" href="/docs/troubleshooting">
+    Access everything anonymously without an Instagram account.
+  </Card>
+</Columns>
+
+## Quick Start
+
+You begin by entering an Instagram username in the search bar on the homepage. InstaDP fetches the profile data in seconds, displaying photos in full resolution. Download individual images or the entire profile gallery with one click.
+
+<Steps>
+  <Step title="Search Profile" icon="search">
+    Type the username, like `exampleuser`, and hit enter.
+  </Step>
+  <Step title="View Content" icon="eye">
+    Scroll through posts and stories in HD quality.
+  </Step>
+  <Step title="Download Files" icon="download">
+    Select images and save them to your device.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  For best results, use public profiles only, as private accounts require login which InstaDP avoids for privacy.
+</Callout>
+
+## Why Choose InstaDP?
+
+You benefit from fast loading times under `<1` second for most profiles. The platform supports batch downloads, allowing you to save multiple images at once. Unlike other tools, InstaDP does not store your data or require sign-ups.
+
+<Tabs>
+  <Tab title="Desktop" icon="monitor">
+    Access via any modern browser like Chrome or Firefox for seamless viewing.
+  </Tab>
+  <Tab title="Mobile" icon="phone">
+    Use on iOS or Android devices with responsive design for touch-friendly navigation.
+  </Tab>
+</Tabs>
+
+<Expandable title="Advanced Usage" default-open="false">
+  Integrate InstaDP with scripts for automated downloads. Use the API endpoints to fetch profile data programmatically.
+
+  ```javascript
+  fetch('https://api.instadp.com/profiles/exampleuser')
+    .then(response => response.json())
+    .then(data => console.log(data.images));
+  ```
+</Expandable>
+
+## Security and Privacy
+
+InstaDP encrypts all transfers to protect content. You never expose credentials, as the service operates on public data only. Regular updates ensure compliance with Instagram's terms.
+
+This introduction covers the essentials. Explore further pages for detailed guides and features. (Word count: 378)

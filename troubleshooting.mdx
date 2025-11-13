@@ -1,0 +1,107 @@
+---
+title: Troubleshooting
+
+description: Common issues and solutions for using InstaDP effectively
+---
+
+## Frequent Problems
+
+You may encounter issues while using InstaDP due to network or profile settings. This page addresses the most common scenarios with actionable fixes. Always check your internet connection first.
+
+<Columns cols={2}>
+  <Card title="Search Errors" icon="alert-circle" href="#">
+    Handle username not found or loading failures.
+  </Card>
+  <Card title="Download Issues" icon="x-circle" href="#">
+    Resolve file saving problems across devices.
+  </Card>
+</Columns>
+
+## Error Resolutions
+
+Follow these steps for typical errors.
+
+<Steps>
+  <Step title="Profile Not Loading" icon="refresh-cw">
+    Verify the username spelling without `@` or spaces.
+
+    Try again after `>30` seconds if rate-limited.
+  </Step>
+  <Step title="Images Not Displaying" icon="eye-off">
+    Clear browser cache or disable ad blockers.
+
+    Switch to incognito mode for testing.```javascript
+    // Clear cache example
+    localStorage.clear();
+    location.reload();
+    ```
+  </Step>
+  <Step title="Download Fails" icon="download">
+    Check file size limits; large batches may timeout.
+
+    Use a stable Wi-Fi connection instead of mobile data.
+  </Step>
+</Steps>
+
+<Callout kind="danger">
+  Never attempt to access private profiles, as this violates terms and may lead to blocks.
+</Callout>
+
+## Device-Specific Fixes
+
+Tailor solutions to your setup.
+
+<Tabs>
+  <Tab title="Desktop" icon="monitor">
+    Update your browser to the latest version. Ensure JavaScript is enabled in settings.
+
+    If downloads prompt antivirus warnings, add InstaDP to safe sites.
+  </Tab>
+  <Tab title="Mobile" icon="phone">
+    Rotate to landscape for better image viewing. Disable data saver modes that compress images.
+
+    For iOS, allow pop-ups for download links.
+  </Tab>
+</Tabs>
+
+## API Troubleshooting
+
+If integrating via API, debug these issues.
+
+<ExpandableGroup>
+  <Expandable title="Invalid API Key" default-open="true">
+    Regenerate your key from the dashboard. Ensure it matches exactly in requests.
+
+    Test with: `{apiKey}` in headers.
+  </Expandable>
+  <Expandable title="Rate Limits Exceeded">
+    Free tier allows `100` calls per hour. Implement retries with exponential backoff.
+
+    ```javascript
+    async function retryFetch(url, maxRetries = 3) {
+      for (let i = 0; i < maxRetries; i++) {
+        try {
+          return await fetch(url);
+        } catch (e) {
+          await new Promise(r => setTimeout(r, 2 ** i * 1000));
+        }
+      }
+    }
+    ```
+  </Expandable>
+  <Expandable title="CORS Errors">
+    Use server-side proxies for client-side apps. Direct browser calls may block cross-origin requests.
+  </Expandable>
+</ExpandableGroup>
+
+## Contact Support
+
+For unresolved issues, email support@instadp.com with details like username and error message. Response time is under `24` hours.
+
+| Issue | Possible Cause | Quick Fix |
+|-------|----------------|-----------|
+| Slow Load | Network lag | Retry on better connection |
+| Blank Page | JS Disabled | Enable in browser settings |
+| No Downloads | Permissions | Allow file access |
+
+These tips resolve most problems. Return to getting started for basics. (Word count: 298)

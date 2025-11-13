@@ -1,0 +1,82 @@
+{
+  "name": "InstaDP Documentation",
+  "initialRoute": "introduction",
+  "colors": {
+    "light": {
+      "brand": "#fb711a"
+    },
+    "dark": {
+      "brand": "#fb711a"
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "icon": "book",
+        "groups": [
+          {
+            "group": "Overview",
+            "icon": "home",
+            "pages": [
+              {
+                "title": "Introduction",
+                "path": "introduction",
+                "icon": "star"
+              }
+            ]
+          },
+          {
+            "group": "Guides",
+            "icon": "rocket",
+            "pages": [
+              {
+                "title": "Getting Started",
+                "path": "getting-started",
+                "icon": "play"
+              },
+              {
+                "title": "Features",
+                "path": "features",
+                "icon": "zap"
+              }
+            ]
+          },
+          {
+            "group": "Support",
+            "icon": "help-circle",
+            "pages": [
+              {
+                "title": "Troubleshooting",
+                "path": "troubleshooting",
+                "icon": "alert-circle"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "icon": "code",
+        "groups": [
+          {
+            "group": "Endpoints",
+            "icon": "terminal",
+            "openapi": "openapi.yaml"
+          }
+        ]
+      },
+      {
+        "tab": "Changelog",
+        "icon": "clock",
+        "pages": [
+          {
+            "title": "Release History",
+            "path": "changelog",
+            "icon": "history"
+          }
+        ]
+      }
+    ]
+  }
+}

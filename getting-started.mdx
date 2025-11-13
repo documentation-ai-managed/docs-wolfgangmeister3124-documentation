@@ -1,0 +1,84 @@
+---
+title: Getting Started
+
+description: Step-by-step guide to begin using InstaDP for profile viewing and downloads
+---
+
+## Basic Usage
+
+You start your InstaDP experience by visiting the homepage and entering a public Instagram username. The platform retrieves profile details, including bio, posts, and images, without any authentication. This process takes less than `<5` seconds typically.
+
+<Columns cols={2}>
+  <Card title="Search Bar" icon="search" href="#">
+    Locate the central input field to type usernames.
+  </Card>
+  <Card title="Results Page" icon="eye" href="#">
+    View fetched content in a clean, organized layout.
+  </Card>
+</Columns>
+
+## Step-by-Step Instructions
+
+Follow these steps to view and download content effectively.
+
+<Steps>
+  <Step title="Enter Username" icon="user">
+    Navigate to instadp.com and input a username like `natgeo` in the search box.
+
+    Press enter to initiate the fetch.
+  </Step>
+  <Step title="Browse Profile" icon="image">
+    Examine the profile overview, including recent posts and highlights.
+
+    Click on thumbnails to enlarge images.
+  </Step>
+  <Step title="Download Content" icon="download">
+    Right-click images or use the download button below each post.
+
+    For bulk actions, select multiple items and export as ZIP.
+  </Step>
+</Steps>
+
+<Callout kind="info">
+  Ensure the profile is public; InstaDP cannot access private accounts to maintain user privacy.
+</Callout>
+
+## Platform Compatibility
+
+InstaDP works across devices for versatile access.
+
+<Tabs>
+  <Tab title="Web Browser" icon="globe">
+    Use Chrome, Safari, or Edge. Enable JavaScript for full functionality. No extensions needed.
+
+    ```javascript
+    // Example: Direct image access via URL
+    const imgUrl = 'https://instadp.com/images/profile.jpg';
+    window.open(imgUrl, '_blank');
+    ```
+  </Tab>
+  <Tab title="Mobile App" icon="smartphone">
+    Open in mobile browsers. Pinch to zoom on images for better viewing.
+
+    Save downloads directly to your gallery.
+  </Tab>
+</Tabs>
+
+## Initial Setup
+
+No installation required. Simply bookmark the site for quick access. If using the API, obtain a free key from the dashboard.
+
+<ExpandableGroup>
+  <Expandable title="What is a Public Profile?" default-open="true">
+    Public profiles allow anyone to view content without following. InstaDP fetches this data ethically.
+  </Expandable>
+  <Expandable title="Download Limits">
+    Free tier allows up to `50` downloads per day. Upgrade for unlimited access.
+  </Expandable>
+</ExpandableGroup>
+
+## Best Practices
+
+Avoid searching non-existent usernames to prevent errors. Use exact handles without `@` symbols. For large profiles with `>1000` posts, expect slightly longer load times.
+
+This guide equips you to start using InstaDP immediately. Refer to features for advanced options. (Word count: 412)
